@@ -35,4 +35,16 @@ spl_autoload_register( function ( $className ) {
 		include_once __DIR__ . '/' . $classes[$className];
 	}
 } );
+
+if ( defined( 'MEDIAWIKI' ) ) {
+	$GLOBALS['wgExtensionCredits']['datavalues'][] = array(
+		'path' => __DIR__,
+		'name' => 'DataValuesInterfaces',
+		'version' => DataValuesInterfaces_VERSION,
+		'author' => array(
+			'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
+		),
+		'url' => 'https://github.com/wikimedia/mediawiki-extensions-DataValuesInterfaces'
+	);
+}
 // @codeCoverageIgnoreEnd
