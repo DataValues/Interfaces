@@ -8,7 +8,7 @@ namespace ValueValidators;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class Error implements {
+class Error {
 
 	const SEVERITY_ERROR = 9;
 	const SEVERITY_WARNING = 4;
