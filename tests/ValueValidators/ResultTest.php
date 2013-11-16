@@ -6,12 +6,7 @@ use ValueValidators\Error;
 use ValueValidators\Result;
 
 /**
- * Unit tests for the ValueParsers\Result class.
- *
- * @file
- * @since 0.1
- *
- * @ingroup ValueValidatorsTest
+ * @covers ValueValidators\Result
  *
  * @group ValueValidators
  * @group DataValueExtensions

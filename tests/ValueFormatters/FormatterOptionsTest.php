@@ -7,11 +7,6 @@ use ValueFormatters\FormatterOptions;
 /**
  * Unit tests for the ValueFormatters\FormatterOptions class.
  *
- * @file
- * @since 0.1
- *
- * @ingroup ValueFormattersTest
- *
  * @group ValueFormatters
  * @group DataValueExtensions
  *

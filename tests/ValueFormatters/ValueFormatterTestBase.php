@@ -8,10 +8,7 @@ use ValueFormatters\ValueFormatter;
 /**
  * Base for unit tests for ValueFormatter implementing classes.
  *
- * @file
  * @since 0.1
- *
- * @ingroup ValueFormattersTest
  *
  * @group ValueFormatters
  * @group DataValueExtensions

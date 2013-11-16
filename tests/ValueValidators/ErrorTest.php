@@ -5,12 +5,7 @@ namespace ValueValidators\Test;
 use ValueValidators\Error;
 
 /**
- * Unit tests for the ValueParsers\Error class.
- *
- * @file
- * @since 0.1
- *
- * @ingroup ValueValidatorsTest
+ * @covers ValueValidators\Error
  *
  * @group ValueValidators
  * @group DataValueExtensions

@@ -7,11 +7,6 @@ use ValueParsers\ParserOptions;
 /**
  * Unit tests for the ValueParsers\ParserOptions class.
  *
- * @file
- * @since 0.1
- *
- * @ingroup ValueParsersTest
- *
  * @group ValueParsers
  * @group DataValueExtensions
  *
