@@ -1,11 +1,21 @@
 <?php
 
+/**
+ * Entry point of the DataValues Interfaces library.
+ *
+ * @since 0.1
+ * @codeCoverageIgnore
+ *
+ * @licence GNU GPL v2+
+ * @author Jeroen De Dauw < jeroendedauw@gmail.com >
+ */
+
 if ( defined( 'DataValuesInterfaces_VERSION' ) ) {
 	// Do not initialize more then once.
 	return;
 }
 
-define( 'DATAVALUES_INTERFACES_VERSION', '0.1 rc' );
+define( 'DATAVALUES_INTERFACES_VERSION', '0.1' );
 
 /**
  * @deprecated
@@ -28,7 +38,6 @@ if ( !defined( 'DATAVALUES_VERSION' ) ) {
 	throw new Exception( 'You need to have the DataValues library loaded in order to use DataValuesInterfaces' );
 }
 
-// @codeCoverageIgnoreStart
 spl_autoload_register( function ( $className ) {
 	$className = ltrim( $className, '\\' );
 
@@ -55,4 +64,3 @@ if ( defined( 'MEDIAWIKI' ) ) {
 		'description' => 'Defines interfaces for ValueParsers, ValueFormatters and ValueValidators',
 	);
 }
-// @codeCoverageIgnoreEnd
