@@ -5,7 +5,7 @@ namespace ValueFormatters\Test;
 use ValueFormatters\FormatterOptions;
 
 /**
- * Unit tests for the ValueFormatters\FormatterOptions class.
+ * @covers ValueFormatters\FormatterOptions
  *
  * @group ValueFormatters
  * @group DataValueExtensions

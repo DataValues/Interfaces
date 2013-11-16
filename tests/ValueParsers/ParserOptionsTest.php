@@ -5,7 +5,7 @@ namespace ValueParsers\Test;
 use ValueParsers\ParserOptions;
 
 /**
- * Unit tests for the ValueParsers\ParserOptions class.
+ * @covers ValueParsers\ParserOptions
  *
  * @group ValueParsers
  * @group DataValueExtensions
