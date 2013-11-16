@@ -12,7 +12,7 @@
 
 if ( defined( 'DataValuesInterfaces_VERSION' ) ) {
 	// Do not initialize more then once.
-	return;
+	return 1;
 }
 
 define( 'DATAVALUES_INTERFACES_VERSION', '0.1' );
