@@ -3,14 +3,12 @@
 namespace ValueValidators;
 
 /**
- * Interface for value validator results.
- *
  * @since 0.1
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class Result implements \Immutable {
+class Result implements {
 
 	/**
 	 * @since 0.1
