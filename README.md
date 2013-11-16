@@ -41,3 +41,28 @@ Get the DataValues Interfaces code, either via git, or some other means. Also ge
 You can find a list of the dependencies in the "require" section of the composer.json file.
 Load all dependencies and the load the DataValues Interfaces library by including its entry point:
 DataValuesInterfaces.php.
+
+## Tests
+
+This library comes with a set up PHPUnit tests that cover all non-trivial code. You can run these
+tests using the PHPUnit configuration file found in the root directory. The tests can also be run
+via TravisCI, as a TravisCI configuration file is also provided in the root directory.
+
+## Authors
+
+DataValues Interfaces has been written by [Jeroen De Dauw](https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw),
+as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project](https://wikidata.org/).
+
+## Release notes
+
+### 0.1 (2013-11-16)
+
+Initial release with these features:
+
+* ValueFormatters\ValueFormatter interface
+* ValueParsers\ValueParser interface
+* ValueValidators\ValueValidator interface
+
+## Links
+
+* [DataValues Interfaces on Packagist](https://packagist.org/packages/data-values/interfaces)
