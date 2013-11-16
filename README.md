@@ -3,7 +3,7 @@
 DataValues Interfaces is a small PHP library that defines a set of interfaces for parsers,
 formatters and validators.
 
-[![Build Status](https://secure.travis-ci.org/JeroenDeDauw/DataValuesInterfaces.png?branch=master)](http://travis-ci.org/JeroenDeDauw/DataValuesInterfaces)
+[![Build Status](https://secure.travis-ci.org/DataValues/Interfaces.png?branch=master)](http://travis-ci.org/DataValues/Interfaces)
 
 On [Packagist](https://packagist.org/packages/data-values/interfaces):
 [![Latest Stable Version](https://poser.pugx.org/data-values/interfaces/version.png)](https://packagist.org/packages/data-values/interfaces)
