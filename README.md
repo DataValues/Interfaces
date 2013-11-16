@@ -13,7 +13,7 @@ On [Packagist](https://packagist.org/packages/data-values/interfaces):
 
 * PHP 5.3 or later
 * [DataValues library](https://packagist.org/packages/data-values/data-values) -
-* see composer.json to get the required version
+see composer.json to get the required version
 
 ## Installation
 
