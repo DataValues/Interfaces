@@ -12,7 +12,8 @@ On [Packagist](https://packagist.org/packages/data-values/interfaces):
 ## Requirements
 
 * PHP 5.3 or later
-* DataValues library - see composer.json to get the required version
+* [DataValues library](https://packagist.org/packages/data-values/data-values) -
+* see composer.json to get the required version
 
 ## Installation
 
