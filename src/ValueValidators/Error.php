@@ -3,14 +3,12 @@
 namespace ValueValidators;
 
 /**
- * Interface for ValueValidator errors.
- *
  * @since 0.1
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class Error implements \Immutable {
+class Error implements {
 
 	const SEVERITY_ERROR = 9;
 	const SEVERITY_WARNING = 4;
