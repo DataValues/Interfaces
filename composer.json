@@ -9,7 +9,7 @@
 		"valuevalidators",
 		"wikidata"
 	],
-	"homepage": "https://github.com/JeroenDeDauw/DataValuesInterfaces",
+	"homepage": "https://github.com/DataValues/Interfaces",
 	"license": "GPL-2.0+",
 	"authors": [
 		{
