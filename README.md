@@ -6,6 +6,7 @@ formatters and validators.
 It is part of the [DataValues set of libraries](https://github.com/DataValues).
 
 [![Build Status](https://secure.travis-ci.org/DataValues/Interfaces.png?branch=master)](http://travis-ci.org/DataValues/Interfaces)
+[![Coverage Status](https://coveralls.io/repos/DataValues/Interfaces/badge.png)](https://coveralls.io/r/DataValues/Interfaces)
 
 On [Packagist](https://packagist.org/packages/data-values/interfaces):
 [![Latest Stable Version](https://poser.pugx.org/data-values/interfaces/version.png)](https://packagist.org/packages/data-values/interfaces)
