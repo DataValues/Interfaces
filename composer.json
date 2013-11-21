@@ -24,7 +24,7 @@
 	},
 	"autoload": {
 		"files" : [
-			"DataValuesInterfaces.php",
+			"Interfaces.php",
 			"tests/ValueFormatters/ValueFormatterTestBase.php"
 		],
 		"psr-0": {

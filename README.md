@@ -41,7 +41,7 @@ DataValues Interfaces 1.0:
 Get the DataValues Interfaces code, either via git, or some other means. Also get all dependencies.
 You can find a list of the dependencies in the "require" section of the composer.json file.
 Load all dependencies and the load the DataValues Interfaces library by including its entry point:
-DataValuesInterfaces.php.
+Interfaces.php.
 
 ## Tests
 
