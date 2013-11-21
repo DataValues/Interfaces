@@ -15,26 +15,12 @@ if ( defined( 'DataValuesInterfaces_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DATAVALUES_INTERFACES_VERSION', '0.1' );
+define( 'DATAVALUES_INTERFACES_VERSION', '0.1.1' );
 
 /**
  * @deprecated
  */
 define( 'DataValuesInterfaces_VERSION', DATAVALUES_INTERFACES_VERSION );
-
-spl_autoload_register( function ( $className ) {
-	$className = ltrim( $className, '\\' );
-
-	static $classes = false;
-
-	if ( $classes === false ) {
-		$classes = include( __DIR__ . '/' . 'DataValuesInterfaces.classes.php' );
-	}
-
-	if ( array_key_exists( $className, $classes ) ) {
-		include_once __DIR__ . '/' . $classes[$className];
-	}
-} );
 
 if ( defined( 'MEDIAWIKI' ) ) {
 	$GLOBALS['wgExtensionCredits']['datavalues'][] = array(
@@ -44,7 +30,7 @@ if ( defined( 'MEDIAWIKI' ) ) {
 		'author' => array(
 			'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
 		),
-		'url' => 'https://github.com/wikimedia/mediawiki-extensions-DataValuesInterfaces',
+		'url' => 'https://github.com/DataValues/Interfaces',
 		'description' => 'Defines interfaces for ValueParsers, ValueFormatters and ValueValidators',
 	);
 }
