@@ -15,7 +15,7 @@ if ( defined( 'DataValuesInterfaces_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DATAVALUES_INTERFACES_VERSION', '0.1.1' );
+define( 'DATAVALUES_INTERFACES_VERSION', '0.1.2' );
 
 /**
  * @deprecated

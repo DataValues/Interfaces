@@ -56,10 +56,11 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
-### 0.1.1 (2013-11-22)
+### 0.1.2 (2013-11-22)
 
 * Improved autoloading code
 * Fixed link in MediaWiki credits
+* Renamed entry point from DataValuesInterfaces.php to Interfaces.php
 
 ### 0.1 (2013-11-16)
 
