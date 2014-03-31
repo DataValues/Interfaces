@@ -56,6 +56,10 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 0.1.3 (2014-03-31)
+
+* Added ValueFormatters\FormattingException
+
 ### 0.1.2 (2013-11-22)
 
 * Improved autoloading code
