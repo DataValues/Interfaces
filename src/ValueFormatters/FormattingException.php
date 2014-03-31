@@ -1,6 +1,6 @@
 <?php
 
-namespace ValueParsers;
+namespace ValueFormatters;
 
 /**
  * @since 0.1
