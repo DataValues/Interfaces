@@ -26,6 +26,7 @@ interface ValueFormatter {
 	 * @param mixed $value The value to format
 	 *
 	 * @return mixed
+	 * @throws FormattingException
 	 */
 	public function format( $value );
 
