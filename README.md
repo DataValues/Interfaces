@@ -56,7 +56,7 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
-### 0.1.4 (dev)
+### 0.1.4 (2014-04-14)
 
 * Added rawValue and expectedFormat arguments to ValueParsers\ParseException
 
