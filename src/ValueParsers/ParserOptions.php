@@ -16,14 +16,14 @@ use RuntimeException;
 final class ParserOptions {
 
 	/**
-	 * @since 0.1
-	 *
 	 * @var array
 	 */
 	protected $options;
 
 	/**
-	 * @since 0.1
+	 * @param array $options
+	 *
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct( array $options = array() ) {
 		foreach ( array_keys( $options ) as $option ) {
@@ -37,8 +37,6 @@ final class ParserOptions {
 
 	/**
 	 * Sets the value of the specified option.
-	 *
-	 * @since 0.1
 	 *
 	 * @param string $option
 	 * @param mixed $value
@@ -57,11 +55,10 @@ final class ParserOptions {
 	 * Returns the value of the specified option. If the option is not set,
 	 * an InvalidArgumentException is thrown.
 	 *
-	 * @since 0.1
-	 *
 	 * @param string $option
 	 *
 	 * @throws InvalidArgumentException
+	 * @return mixed
 	 */
 	public function getOption( $option ) {
 		if ( !array_key_exists( $option, $this->options ) ) {
@@ -74,11 +71,9 @@ final class ParserOptions {
 	/**
 	 * Returns if the specified option is set or not.
 	 *
-	 * @since 0.1
-	 *
 	 * @param string $option
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function hasOption( $option ) {
 		return array_key_exists( $option, $this->options );
@@ -86,8 +81,6 @@ final class ParserOptions {
 
 	/**
 	 * Sets the value of an option to the provided default in case the option is not set yet.
-	 *
-	 * @since 0.1
 	 *
 	 * @param string $option
 	 * @param mixed $default
@@ -101,8 +94,6 @@ final class ParserOptions {
 	/**
 	 * Requires an option to be set.
 	 * If it's not set, a RuntimeException is thrown.
-	 *
-	 * @since 0.1
 	 *
 	 * @param string $option
 	 *

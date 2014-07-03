@@ -21,8 +21,6 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	/**
 	 * Returns a list with valid inputs and their associated formatting output.
 	 *
-	 * @since 0.1
-	 *
 	 * @return array
 	 */
 	public abstract function validProvider();
@@ -30,15 +28,11 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	/**
 	 * Returns the name of the ValueFormatter implementing class.
 	 *
-	 * @since 0.1
-	 *
 	 * @return string
 	 */
 	protected abstract function getFormatterClass();
 
 	/**
-	 * @since 0.1
-	 *
 	 * @param FormatterOptions $options
 	 *
 	 * @return ValueFormatter
@@ -50,8 +44,6 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @dataProvider validProvider
-	 *
-	 * @since 0.1
 	 *
 	 * @param mixed $value
 	 * @param mixed $expected

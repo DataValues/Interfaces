@@ -21,10 +21,6 @@ class Error {
 	protected $params;
 
 	/**
-	 * Create a new error.
-	 *
-	 * @since 0.1
-	 *
 	 * @param string      $text
 	 * @param string|null $property
 	 * @param string      $code
@@ -37,15 +33,11 @@ class Error {
 	}
 
 	/**
-	 * @since 0.1
-	 *
 	 * @param string      $text
 	 * @param integer     $severity
 	 * @param string|null $property
 	 * @param string      $code
 	 * @param array       $params
-	 *
-	 * @return \ValueValidators\Error
 	 */
 	protected function __construct( $text, $severity, $property, $code, $params ) {
 		$this->text = $text;
@@ -56,10 +48,6 @@ class Error {
 	}
 
 	/**
-	 * Returns the error text.
-	 *
-	 * @since 0.1
-	 *
 	 * @return string
 	 */
 	public function getText() {
@@ -67,10 +55,6 @@ class Error {
 	}
 
 	/**
-	 * Returns the severity of the error
-	 *
-	 * @since 0.1
-	 *
 	 * @return integer, element of the ValueValidatorError::SEVERITY_ enum
 	 */
 	public function getSeverity() {
@@ -79,8 +63,6 @@ class Error {
 
 	/**
 	 * Returns the property of the value for which the error occurred, or null if it occurred for the value itself.
-	 *
-	 * @since 0.1
 	 *
 	 * @return string|null
 	 */
