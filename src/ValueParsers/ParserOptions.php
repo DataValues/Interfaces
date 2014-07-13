@@ -24,6 +24,8 @@ final class ParserOptions {
 
 	/**
 	 * @since 0.1
+	 *
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct( array $options = array() ) {
 		foreach ( array_keys( $options ) as $option ) {
@@ -62,6 +64,7 @@ final class ParserOptions {
 	 * @param string $option
 	 *
 	 * @throws InvalidArgumentException
+	 * @return mixed
 	 */
 	public function getOption( $option ) {
 		if ( !array_key_exists( $option, $this->options ) ) {
@@ -78,7 +81,7 @@ final class ParserOptions {
 	 *
 	 * @param string $option
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function hasOption( $option ) {
 		return array_key_exists( $option, $this->options );

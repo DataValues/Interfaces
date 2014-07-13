@@ -65,6 +65,7 @@ final class FormatterOptions {
 	 * @param string $option
 	 *
 	 * @throws OutOfBoundsException
+	 * @return mixed
 	 */
 	public function getOption( $option ) {
 		if ( !array_key_exists( $option, $this->options ) ) {
@@ -81,7 +82,7 @@ final class FormatterOptions {
 	 *
 	 * @param string $option
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function hasOption( $option ) {
 		return array_key_exists( $option, $this->options );

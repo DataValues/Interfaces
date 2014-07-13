@@ -36,6 +36,8 @@ abstract class ValueFormatterBase implements ValueFormatter {
 	 * @since 0.1
 	 *
 	 * @param string $option
+	 *
+	 * @return mixed
 	 */
 	protected final function getOption( $option ) {
 		return $this->options->getOption( $option );

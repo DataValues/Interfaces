@@ -23,7 +23,7 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	 *
 	 * @since 0.1
 	 *
-	 * @return array
+	 * @return array[]
 	 */
 	public abstract function validProvider();
 

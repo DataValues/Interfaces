@@ -49,8 +49,6 @@ abstract class ValueValidatorObject implements ValueValidator {
 	/**
 	 * @see ValueValidator::validate
 	 *
-	 * @since 0.1
-	 *
 	 * @param mixed $value
 	 *
 	 * @return Result
@@ -101,8 +99,6 @@ abstract class ValueValidatorObject implements ValueValidator {
 	/**
 	 * Sets the parameter definition values contained in the provided array.
 	 * @see ParamDefinition::setArrayValues
-	 *
-	 * @since 0.1
 	 *
 	 * @param array $param
 	 */
@@ -192,7 +188,7 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 *
 	 * @since 0.1
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	protected function enableWhitelistRestrictions() {
 		return true;
@@ -206,7 +202,7 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 *
 	 * @since 0.1
 	 *
-	 * @return array|boolean false
+	 * @return array|bool false
 	 */
 	public function getWhitelistedValues() {
 		return $this->allowedValues;

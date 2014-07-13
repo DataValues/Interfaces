@@ -13,7 +13,7 @@ class Result {
 	/**
 	 * @since 0.1
 	 *
-	 * @var boolean
+	 * @var bool
 	 */
 	protected $isValid;
 
@@ -81,7 +81,7 @@ class Result {
 	/**
 	 * @since 0.1
 	 *
-	 * @param boolean $isValid
+	 * @param bool $isValid
 	 * @param Error[] $errors
 	 */
 	protected function __construct( $isValid, array $errors = array() ) {
@@ -94,7 +94,7 @@ class Result {
 	 *
 	 * @since 0.1
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function isValid() {
 		return $this->isValid;
