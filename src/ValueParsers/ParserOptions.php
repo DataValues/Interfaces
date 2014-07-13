@@ -16,12 +16,14 @@ use RuntimeException;
 final class ParserOptions {
 
 	/**
+	 * @since 0.1
+	 *
 	 * @var array
 	 */
 	protected $options;
 
 	/**
-	 * @param array $options
+	 * @since 0.1
 	 *
 	 * @throws InvalidArgumentException
 	 */
@@ -37,6 +39,8 @@ final class ParserOptions {
 
 	/**
 	 * Sets the value of the specified option.
+	 *
+	 * @since 0.1
 	 *
 	 * @param string $option
 	 * @param mixed $value
@@ -55,6 +59,8 @@ final class ParserOptions {
 	 * Returns the value of the specified option. If the option is not set,
 	 * an InvalidArgumentException is thrown.
 	 *
+	 * @since 0.1
+	 *
 	 * @param string $option
 	 *
 	 * @throws InvalidArgumentException
@@ -71,6 +77,8 @@ final class ParserOptions {
 	/**
 	 * Returns if the specified option is set or not.
 	 *
+	 * @since 0.1
+	 *
 	 * @param string $option
 	 *
 	 * @return bool
@@ -81,6 +89,8 @@ final class ParserOptions {
 
 	/**
 	 * Sets the value of an option to the provided default in case the option is not set yet.
+	 *
+	 * @since 0.1
 	 *
 	 * @param string $option
 	 * @param mixed $default
@@ -94,6 +104,8 @@ final class ParserOptions {
 	/**
 	 * Requires an option to be set.
 	 * If it's not set, a RuntimeException is thrown.
+	 *
+	 * @since 0.1
 	 *
 	 * @param string $option
 	 *

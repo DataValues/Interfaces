@@ -11,16 +11,22 @@ namespace ValueValidators;
 class Result {
 
 	/**
+	 * @since 0.1
+	 *
 	 * @var bool
 	 */
 	protected $isValid;
 
 	/**
+	 * @since 0.1
+	 *
 	 * @var Error[]
 	 */
 	protected $errors = array();
 
 	/**
+	 * @since 0.1
+	 *
 	 * @return Result
 	 */
 	public static function newSuccess() {
@@ -28,6 +34,8 @@ class Result {
 	}
 
 	/**
+	 * @since 0.1
+	 *
 	 * @param Error[] $errors
 	 *
 	 * @return Result
@@ -46,6 +54,8 @@ class Result {
 	 * Otherwise, a new Result is constructed that contains
 	 * all errors from $a and $b, and is considered valid
 	 * if both $a and $b were valid.
+	 *
+	 * @since 0.1
 	 *
 	 * @param Result $a
 	 * @param Result $b
@@ -69,6 +79,8 @@ class Result {
 	}
 
 	/**
+	 * @since 0.1
+	 *
 	 * @param bool $isValid
 	 * @param Error[] $errors
 	 */
@@ -80,6 +92,8 @@ class Result {
 	/**
 	 * Returns if the value was found to be valid or not.
 	 *
+	 * @since 0.1
+	 *
 	 * @return bool
 	 */
 	public function isValid() {
@@ -88,6 +102,8 @@ class Result {
 
 	/**
 	 * Returns an array with the errors that occurred during validation.
+	 *
+	 * @since 0.1
 	 *
 	 * @return Error[]
 	 */

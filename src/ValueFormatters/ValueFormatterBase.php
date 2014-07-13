@@ -13,11 +13,15 @@ namespace ValueFormatters;
 abstract class ValueFormatterBase implements ValueFormatter {
 
 	/**
+	 * @since 0.1
+	 *
 	 * @var FormatterOptions
 	 */
 	protected $options;
 
 	/**
+	 * @since 0.1
+	 *
 	 * @param FormatterOptions $options
 	 */
 	public function __construct( FormatterOptions $options ) {
@@ -28,6 +32,8 @@ abstract class ValueFormatterBase implements ValueFormatter {
 
 	/**
 	 * Shortcut to $this->options->getOption.
+	 *
+	 * @since 0.1
 	 *
 	 * @param string $option
 	 *
@@ -48,6 +54,8 @@ abstract class ValueFormatterBase implements ValueFormatter {
 
 	/**
 	 * Shortcut to $this->options->defaultOption.
+	 *
+	 * @since 0.1
 	 *
 	 * @param string $option
 	 * @param mixed $default

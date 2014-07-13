@@ -16,6 +16,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 * A list of allowed values. This means the parameters value(s) must be in the list
 	 * during validation. False for no restriction.
 	 *
+	 * @since 0.1
+	 *
 	 * @var array|false
 	 */
 	protected $allowedValues = false;
@@ -24,16 +26,22 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 * A list of prohibited values. This means the parameters value(s) must
 	 * not be in the list during validation. False for no restriction.
 	 *
+	 * @since 0.1
+	 *
 	 * @var array|false
 	 */
 	protected $prohibitedValues = false;
 
 	/**
+	 * @since 0.1
+	 *
 	 * @var array
 	 */
 	protected $options = array();
 
 	/**
+	 * @since 0.1
+	 *
 	 * @var Error[]
 	 */
 	protected $errors = array();
@@ -65,6 +73,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 	/**
 	 * Checks the value against the allowed values and prohibited values lists in case they are set.
 	 *
+	 * @since 0.1
+	 *
 	 * @param mixed $value
 	 */
 	protected function valueIsAllowed( $value ) {
@@ -79,6 +89,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 
 	/**
 	 * @see ValueValidator::validate
+	 *
+	 * @since 0.1
 	 *
 	 * @param mixed $value
 	 */
@@ -107,6 +119,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 	/**
 	 * Registers an error message.
 	 *
+	 * @since 0.1
+	 *
 	 * @param string $errorMessage
 	 */
 	protected function addErrorMessage( $errorMessage ) {
@@ -116,6 +130,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 	/**
 	 * Registers an error.
 	 *
+	 * @since 0.1
+	 *
 	 * @param Error $error
 	 */
 	protected function addError( Error $error ) {
@@ -124,6 +140,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 
 	/**
 	 * Registers a list of errors.
+	 *
+	 * @since 0.1
 	 *
 	 * @param Error[] $errors
 	 */
@@ -136,6 +154,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 * Options of $this can be mapped to those of the passed ValueValidator using
 	 * the $optionMap parameter in which keys are source names and values are target
 	 * names.
+	 *
+	 * @since 0.1
 	 *
 	 * @param mixed $value
 	 * @param ValueValidator $validator
@@ -166,6 +186,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 	/**
 	 * If the "values" and "excluding" arguments should be held into account.
 	 *
+	 * @since 0.1
+	 *
 	 * @return bool
 	 */
 	protected function enableWhitelistRestrictions() {
@@ -177,6 +199,8 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 *
 	 * TODO: think about how to access set options in general and if we want to have
 	 * whitelist and baclklist values in the validator objects to begin with.
+	 *
+	 * @since 0.1
 	 *
 	 * @return array|bool false
 	 */
