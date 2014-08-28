@@ -4,7 +4,7 @@ if ( PHP_SAPI !== 'cli' ) {
 	die( 'Not an entry point' );
 }
 
-$pwd = exec( 'pwd' );
+$pwd = getcwd();
 chdir( __DIR__ . '/..' );
 passthru( 'composer update' );
 chdir( $pwd );
