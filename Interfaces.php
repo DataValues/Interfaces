@@ -32,5 +32,6 @@ if ( defined( 'MEDIAWIKI' ) ) {
 		),
 		'url' => 'https://github.com/DataValues/Interfaces',
 		'description' => 'Defines interfaces for ValueParsers, ValueFormatters and ValueValidators',
+		'license-name' => 'GPL-2.0+'
 	);
 }
