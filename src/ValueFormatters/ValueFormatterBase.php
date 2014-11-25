@@ -22,10 +22,10 @@ abstract class ValueFormatterBase implements ValueFormatter {
 	/**
 	 * @since 0.1
 	 *
-	 * @param FormatterOptions $options
+	 * @param FormatterOptions|null $options
 	 */
-	public function __construct( FormatterOptions $options ) {
-		$this->options = $options;
+	public function __construct( FormatterOptions $options = null ) {
+		$this->options = $options ?: new FormatterOptions();
 
 		$this->options->defaultOption( ValueFormatter::OPT_LANG, 'en' );
 	}
