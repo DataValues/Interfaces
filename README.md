@@ -56,13 +56,18 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 0.1.5 (2015-02-14)
+
+* The options in the `ValueFormatterBase` constructor are now optional
+* The MediaWiki extension registration now includes the license
+
 ### 0.1.4 (2014-04-14)
 
-* Added rawValue and expectedFormat arguments to ValueParsers\ParseException
+* Added rawValue and expectedFormat arguments to `ValueParsers\ParseException`
 
 ### 0.1.3 (2014-03-31)
 
-* Added ValueFormatters\FormattingException
+* Added `ValueFormatters\FormattingException`
 
 ### 0.1.2 (2013-11-22)
 
@@ -74,9 +79,9 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 Initial release with these features:
 
-* ValueFormatters\ValueFormatter interface
-* ValueParsers\ValueParser interface
-* ValueValidators\ValueValidator interface
+* `ValueFormatters\ValueFormatter` interface
+* `ValueParsers\ValueParser` interface
+* `ValueValidators\ValueValidator` interface
 
 ## Links
 
