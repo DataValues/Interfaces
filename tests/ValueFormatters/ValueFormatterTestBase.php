@@ -2,6 +2,7 @@
 
 namespace ValueFormatters\Test;
 
+use LogicException;
 use ValueFormatters\FormatterOptions;
 use ValueFormatters\ValueFormatter;
 
@@ -28,24 +29,27 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	public abstract function validProvider();
 
 	/**
-	 * Returns the name of the ValueFormatter implementing class.
-	 *
-	 * @since 0.1
+	 * @deprecated since 0.2, override the getInstance method instead.
 	 *
 	 * @return string
 	 */
-	protected abstract function getFormatterClass();
+	protected function getFormatterClass() {
+		throw new LogicException(
+			'ValueFormatterTestBase subclasses either need to override getFormatterClass or getInstance'
+		);
+	}
 
 	/**
 	 * @since 0.1
+	 * @todo Should become abstract when getFormatterClass is removed.
 	 *
-	 * @param FormatterOptions $options
+	 * @param FormatterOptions|null $options
 	 *
 	 * @return ValueFormatter
 	 */
-	protected function getInstance( FormatterOptions $options ) {
+	protected function getInstance( FormatterOptions $options = null ) {
 		$class = $this->getFormatterClass();
-		return new $class( $options );
+		return new $class( $options ?: new FormatterOptions() );
 	}
 
 	/**
@@ -59,11 +63,7 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	 * @param ValueFormatter|null $formatter
 	 */
 	public function testValidFormat( $value, $expected, FormatterOptions $options = null, ValueFormatter $formatter = null ) {
-		if ( $options === null ) {
-			$options = new FormatterOptions();
-		}
-
-		if ( is_null( $formatter ) ) {
+		if ( $formatter === null ) {
 			$formatter = $this->getInstance( $options );
 		}
 
