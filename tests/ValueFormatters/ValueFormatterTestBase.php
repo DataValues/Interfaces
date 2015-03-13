@@ -28,25 +28,13 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	public abstract function validProvider();
 
 	/**
-	 * Returns the name of the ValueFormatter implementing class.
-	 *
 	 * @since 0.1
 	 *
-	 * @return string
-	 */
-	protected abstract function getFormatterClass();
-
-	/**
-	 * @since 0.1
-	 *
-	 * @param FormatterOptions $options
+	 * @param FormatterOptions|null $options
 	 *
 	 * @return ValueFormatter
 	 */
-	protected function getInstance( FormatterOptions $options ) {
-		$class = $this->getFormatterClass();
-		return new $class( $options );
-	}
+	protected abstract function getInstance( FormatterOptions $options = null );
 
 	/**
 	 * @dataProvider validProvider
@@ -59,11 +47,7 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	 * @param ValueFormatter|null $formatter
 	 */
 	public function testValidFormat( $value, $expected, FormatterOptions $options = null, ValueFormatter $formatter = null ) {
-		if ( $options === null ) {
-			$options = new FormatterOptions();
-		}
-
-		if ( is_null( $formatter ) ) {
+		if ( $formatter === null ) {
 			$formatter = $this->getInstance( $options );
 		}
 

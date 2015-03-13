@@ -56,6 +56,11 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 0.2.0 (alpha)
+
+* Dropped `ValueFormatterTestBase::getFormatterClass`
+* Made `ValueFormatterTestBase::getInstance` abstract
+
 ### 0.1.5 (2015-02-14)
 
 * The options in the `ValueFormatterBase` constructor are now optional
