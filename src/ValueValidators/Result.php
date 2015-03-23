@@ -112,8 +112,3 @@ class Result {
 	}
 
 }
-
-/**
- * @deprecated
- */
-class ResultObject extends Result {}

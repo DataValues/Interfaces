@@ -95,8 +95,3 @@ class Error {
 	}
 
 }
-
-/**
- * @deprecated
- */
-class ErrorObject extends Error {}

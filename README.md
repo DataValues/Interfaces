@@ -56,8 +56,11 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
-### 0.2.0 (alpha)
+### 1.0.0 (alpha)
 
+* Dropped deprecated `ErrorObject`, use `Error` instead
+* Dropped deprecated `ResultObject`, use `Result` instead
+* Dropped deprecated constant `DataValuesInterfaces_VERSION`, use `DATAVALUES_INTERFACES_VERSION` instead
 * Dropped `ValueFormatterTestBase::getFormatterClass`
 * Made `ValueFormatterTestBase::getInstance` abstract
 * The options in `ValueFormatterTestBase::getInstance` are now optional
