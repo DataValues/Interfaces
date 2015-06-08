@@ -28,11 +28,11 @@ the git repository and take care of loading yourself.
 To add this package as a local, per-project dependency to your project, simply add a
 dependency on `data-values/interfaces` to your project's `composer.json` file.
 Here is a minimal example of a `composer.json` file that just defines a dependency on
-DataValues Interfaces 1.0:
+DataValues Interfaces 0.2:
 
     {
         "require": {
-            "data-values/interfaces": "1.0.*"
+            "data-values/interfaces": "0.2.*"
         }
     }
 
@@ -56,7 +56,7 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
-### 1.0.0 (alpha)
+### 0.2.0 (2015-08-11)
 
 * Dropped deprecated `ErrorObject`, use `Error` instead
 * Dropped deprecated `ResultObject`, use `Result` instead
