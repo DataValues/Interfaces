@@ -62,10 +62,6 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @dataProvider setOptionProvider
-	 *
-	 * @param FormatterOptions $options
-	 * @param $option
-	 * @param $value
 	 */
 	public function testSetAndGetOption( FormatterOptions $options, $option, $value ) {
 		$options->setOption( $option, $value );

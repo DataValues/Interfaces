@@ -30,7 +30,7 @@ class Error {
 	 *
 	 * @return Error
 	 */
-	public static function newError( $text = '', $property = null, $code = 'invalid', $params = array() ) {
+	public static function newError( $text = '', $property = null, $code = 'invalid', array $params = array() ) {
 		return new static( $text, Error::SEVERITY_ERROR, $property, $code, $params );
 	}
 
@@ -43,7 +43,7 @@ class Error {
 	 * @param string      $code
 	 * @param array       $params
 	 */
-	protected function __construct( $text, $severity, $property, $code, $params ) {
+	protected function __construct( $text, $severity, $property, $code, array $params ) {
 		$this->text = $text;
 		$this->severity = $severity;
 		$this->property = $property;

@@ -62,10 +62,6 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @dataProvider setOptionProvider
-	 *
-	 * @param ParserOptions $options
-	 * @param $option
-	 * @param $value
 	 */
 	public function testSetAndGetOption( ParserOptions $options, $option, $value ) {
 		$options->setOption( $option, $value );
