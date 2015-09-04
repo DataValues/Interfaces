@@ -84,7 +84,7 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 * Fixed link in MediaWiki credits
 * Renamed entry point from DataValuesInterfaces.php to Interfaces.php
 
-### 0.1 (2013-11-16)
+### 0.1.0 (2013-11-16)
 
 Initial release with these features:
 
