@@ -53,7 +53,7 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 *
 	 * @return Result
 	 */
-	public final function validate( $value ) {
+	final public function validate( $value ) {
 		$this->errors = array();
 
 		if ( $this->enableWhitelistRestrictions() ) {
