@@ -39,7 +39,7 @@ abstract class ValueFormatterBase implements ValueFormatter {
 	 *
 	 * @return mixed
 	 */
-	protected final function getOption( $option ) {
+	final protected function getOption( $option ) {
 		return $this->options->getOption( $option );
 	}
 
@@ -48,7 +48,7 @@ abstract class ValueFormatterBase implements ValueFormatter {
 	 *
 	 * @param string $option
 	 */
-	protected final function requireOption( $option ) {
+	final protected function requireOption( $option ) {
 		$this->options->requireOption( $option );
 	}
 
@@ -60,7 +60,7 @@ abstract class ValueFormatterBase implements ValueFormatter {
 	 * @param string $option
 	 * @param mixed $default
 	 */
-	protected final function defaultOption( $option, $default ) {
+	final protected function defaultOption( $option, $default ) {
 		$this->options->defaultOption( $option, $default );
 	}
 
