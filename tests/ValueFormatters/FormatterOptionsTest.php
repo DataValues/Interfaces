@@ -109,10 +109,6 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 		}
 	}
 
-	public function testForSomeReasonPhpSegfaultsIfThereIsOneMethodLess() {
-		$this->assertTrue( (bool)'This is fucking weird' );
-	}
-
 	/**
 	 * @dataProvider nonExistingOptionsProvider
 	 */
