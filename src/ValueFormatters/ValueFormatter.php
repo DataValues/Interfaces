@@ -3,8 +3,6 @@
 namespace ValueFormatters;
 
 /**
- * Interface for value formatters.
- *
  * @since 0.1
  *
  * @licence GNU GPL v2+
@@ -19,8 +17,6 @@ interface ValueFormatter {
 	const OPT_LANG = 'lang';
 
 	/**
-	 * Formats a value.
-	 *
 	 * @since 0.1
 	 *
 	 * @param mixed $value The value to format

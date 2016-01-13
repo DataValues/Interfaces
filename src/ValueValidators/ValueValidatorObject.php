@@ -162,7 +162,12 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 * @param string|null $property
 	 * @param array $optionMap
 	 */
-	protected function runSubValidator( $value, ValueValidator $validator, $property = null, array $optionMap = array() ) {
+	protected function runSubValidator(
+		$value,
+		ValueValidator $validator,
+		$property = null,
+		array $optionMap = array()
+	) {
 		if ( $optionMap !== array() ) {
 			$options = array();
 

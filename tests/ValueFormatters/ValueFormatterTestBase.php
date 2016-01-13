@@ -46,7 +46,12 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 	 * @param FormatterOptions|null $options
 	 * @param ValueFormatter|null $formatter
 	 */
-	public function testValidFormat( $value, $expected, FormatterOptions $options = null, ValueFormatter $formatter = null ) {
+	public function testValidFormat(
+		$value,
+		$expected,
+		FormatterOptions $options = null,
+		ValueFormatter $formatter = null
+	) {
 		if ( $formatter === null ) {
 			$formatter = $this->getInstance( $options );
 		}
