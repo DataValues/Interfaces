@@ -31,7 +31,7 @@ class Error {
 	 * @return Error
 	 */
 	public static function newError( $text = '', $property = null, $code = 'invalid', array $params = array() ) {
-		return new static( $text, Error::SEVERITY_ERROR, $property, $code, $params );
+		return new static( $text, self::SEVERITY_ERROR, $property, $code, $params );
 	}
 
 	/**
