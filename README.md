@@ -56,6 +56,10 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 0.2.1 (2016-01-13)
+
+* Fixed an issue when using this component with HHVM 1.11.0 (see #21).
+
 ### 0.2.0 (2015-08-11)
 
 * Dropped deprecated `ErrorObject`, use `Error` instead
