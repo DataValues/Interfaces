@@ -27,7 +27,7 @@ class Result {
 	/**
 	 * @since 0.1
 	 *
-	 * @return Result
+	 * @return static
 	 */
 	public static function newSuccess() {
 		return new static( true );
@@ -38,7 +38,7 @@ class Result {
 	 *
 	 * @param Error[] $errors
 	 *
-	 * @return Result
+	 * @return static
 	 */
 	public static function newError( array $errors ) {
 		return new static( false, $errors );
@@ -57,12 +57,12 @@ class Result {
 	 *
 	 * @since 0.1
 	 *
-	 * @param Result $a
-	 * @param Result $b
+	 * @param self $a
+	 * @param self $b
 	 *
-	 * @return Result
+	 * @return self
 	 */
-	public static function merge( Result $a, Result $b ) {
+	public static function merge( self $a, self $b ) {
 		$aErrors = $a->getErrors();
 		$bErrors = $b->getErrors();
 
@@ -74,7 +74,7 @@ class Result {
 			$errors = array_merge( $aErrors, $bErrors );
 			$valid = ( $a->isValid() && $b->isValid() );
 
-			return new Result( $valid, $errors );
+			return new self( $valid, $errors );
 		}
 	}
 
