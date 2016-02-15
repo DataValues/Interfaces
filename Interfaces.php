@@ -15,4 +15,4 @@ if ( defined( 'DATAVALUES_INTERFACES_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DATAVALUES_INTERFACES_VERSION', '0.2.5' );
+define( 'DATAVALUES_INTERFACES_VERSION', '1.0.0 alpha' );

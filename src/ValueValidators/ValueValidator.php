@@ -23,13 +23,4 @@ interface ValueValidator {
 	 */
 	public function validate( $value );
 
-	/**
-	 * Takes an associative array with options and sets those known to the ValueValidator.
-	 *
-	 * @since 0.1
-	 *
-	 * @param array $options
-	 */
-	public function setOptions( array $options );
-
 }
