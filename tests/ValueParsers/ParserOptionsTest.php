@@ -25,7 +25,7 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 		$parserOptions = new ParserOptions( $options );
 
 		foreach ( $options as $option => $value ) {
-			$this->assertEquals(
+			$this->assertSame(
 				serialize( $value ),
 				serialize( $parserOptions->getOption( $option ) ),
 				'Option should be set properly'
@@ -105,7 +105,7 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 
 		foreach ( $values as $value ) {
 			$parserOptions->setOption( $value[0], $value[1] );
-			$this->assertEquals( $value[1], $parserOptions->getOption( $value[0] ) );
+			$this->assertSame( $value[1], $parserOptions->getOption( $value[0] ) );
 		}
 	}
 
@@ -163,7 +163,7 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 		foreach ( $options as $option => $value ) {
 			$parserOptions->defaultOption( $option, 9001 );
 
-			$this->assertEquals(
+			$this->assertSame(
 				serialize( $value ),
 				serialize( $parserOptions->getOption( $option ) ),
 				'Defaulting a set option should not affect its value'
@@ -180,7 +180,7 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 		foreach ( $defaults as $option => $value ) {
 			$parserOptions->defaultOption( $option, $value );
 
-			$this->assertEquals(
+			$this->assertSame(
 				serialize( $value ),
 				serialize( $parserOptions->getOption( $option ) ),
 				'Defaulting a not set option should affect its value'

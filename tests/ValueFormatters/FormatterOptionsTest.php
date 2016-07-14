@@ -25,7 +25,7 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 		$formatterOptions = new FormatterOptions( $options );
 
 		foreach ( $options as $option => $value ) {
-			$this->assertEquals(
+			$this->assertSame(
 				serialize( $value ),
 				serialize( $formatterOptions->getOption( $option ) ),
 				'Option should be set properly'
@@ -105,7 +105,7 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 
 		foreach ( $values as $value ) {
 			$formatterOptions->setOption( $value[0], $value[1] );
-			$this->assertEquals( $value[1], $formatterOptions->getOption( $value[0] ) );
+			$this->assertSame( $value[1], $formatterOptions->getOption( $value[0] ) );
 		}
 	}
 
@@ -163,7 +163,7 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 		foreach ( $options as $option => $value ) {
 			$formatterOptions->defaultOption( $option, 9001 );
 
-			$this->assertEquals(
+			$this->assertSame(
 				serialize( $value ),
 				serialize( $formatterOptions->getOption( $option ) ),
 				'Defaulting a set option should not affect its value'
@@ -180,7 +180,7 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 		foreach ( $defaults as $option => $value ) {
 			$formatterOptions->defaultOption( $option, $value );
 
-			$this->assertEquals(
+			$this->assertSame(
 				serialize( $value ),
 				serialize( $formatterOptions->getOption( $option ) ),
 				'Defaulting a not set option should affect its value'

@@ -56,6 +56,10 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 0.2.2 (2016-07-14)
+
+* Fixed `ValueFormatterTestBase` not doing strict string comparisons
+
 ### 0.2.1 (2016-01-13)
 
 * Fixed an issue when using this component with HHVM 1.11.0 (see #21).

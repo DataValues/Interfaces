@@ -77,7 +77,7 @@ class ResultTest extends \PHPUnit_Framework_TestCase {
 	public function testMerge( $a, $b, $expectedValid, $expectedErrorCount, $message ) {
 		$result = Result::merge( $a, $b );
 
-		$this->assertEquals( $expectedValid, $result->isValid(), $message );
+		$this->assertSame( $expectedValid, $result->isValid(), $message );
 		$this->assertCount( $expectedErrorCount, $result->getErrors(), $message );
 	}
 
