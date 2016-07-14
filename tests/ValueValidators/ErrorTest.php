@@ -10,7 +10,7 @@ use ValueValidators\Error;
  * @group ValueValidators
  * @group DataValueExtensions
  *
- * @licence GNU GPL v2+
+ * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 class ErrorTest extends \PHPUnit_Framework_TestCase {
