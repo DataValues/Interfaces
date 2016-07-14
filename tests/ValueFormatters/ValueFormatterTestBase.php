@@ -13,7 +13,7 @@ use ValueFormatters\ValueFormatter;
  * @group ValueFormatters
  * @group DataValueExtensions
  *
- * @licence GNU GPL v2+
+ * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
