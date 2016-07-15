@@ -3,6 +3,9 @@
 namespace ValueFormatters;
 
 /**
+ * Interface for value formatters, typically (but not limited to) expecting a DataValue object and
+ * returning a string.
+ *
  * @since 0.1
  *
  * @license GPL-2.0+
@@ -11,7 +14,8 @@ namespace ValueFormatters;
 interface ValueFormatter {
 
 	/**
-	 * Identifier for the option that holds the code of the language in which the parser should operate.
+	 * Identifier for the option that holds the code of the language in which the formatter should
+	 * operate.
 	 * @since 0.1
 	 */
 	const OPT_LANG = 'lang';
@@ -19,7 +23,7 @@ interface ValueFormatter {
 	/**
 	 * @since 0.1
 	 *
-	 * @param mixed $value The value to format
+	 * @param mixed $value
 	 *
 	 * @return mixed
 	 * @throws FormattingException

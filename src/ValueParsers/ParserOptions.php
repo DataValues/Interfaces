@@ -6,7 +6,7 @@ use InvalidArgumentException;
 use RuntimeException;
 
 /**
- * Options interface for parsers.
+ * Object holding options for a parser.
  *
  * @since 0.1
  *
