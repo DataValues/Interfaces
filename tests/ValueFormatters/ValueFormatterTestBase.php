@@ -56,7 +56,7 @@ abstract class ValueFormatterTestBase extends \PHPUnit_Framework_TestCase {
 			$formatter = $this->getInstance( $options );
 		}
 
-		$this->assertEquals( $expected, $formatter->format( $value ) );
+		$this->assertSame( $expected, $formatter->format( $value ) );
 	}
 
 }
