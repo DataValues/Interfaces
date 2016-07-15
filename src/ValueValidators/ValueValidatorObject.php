@@ -64,8 +64,7 @@ abstract class ValueValidatorObject implements ValueValidator {
 
 		if ( $this->errors === array() ) {
 			return Result::newSuccess();
-		}
-		else {
+		} else {
 			return Result::newError( $this->errors );
 		}
 	}
@@ -94,7 +93,7 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 *
 	 * @param mixed $value
 	 */
-	public abstract function doValidation( $value );
+	abstract public function doValidation( $value );
 
 	/**
 	 * Sets the parameter definition values contained in the provided array.

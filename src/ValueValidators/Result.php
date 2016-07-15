@@ -68,7 +68,7 @@ class Result {
 
 		if ( $a->isValid() && empty( $aErrors ) ) {
 			return $b;
-		} elseif( $b->isValid() && empty( $bErrors ) ) {
+		} elseif ( $b->isValid() && empty( $bErrors ) ) {
 			return $a;
 		} else {
 			$errors = array_merge( $aErrors, $bErrors );
