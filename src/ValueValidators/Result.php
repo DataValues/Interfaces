@@ -27,7 +27,7 @@ class Result {
 	/**
 	 * @since 0.1
 	 *
-	 * @return static
+	 * @return self
 	 */
 	public static function newSuccess() {
 		return new static( true );
@@ -38,7 +38,7 @@ class Result {
 	 *
 	 * @param Error[] $errors
 	 *
-	 * @return static
+	 * @return self
 	 */
 	public static function newError( array $errors ) {
 		return new static( false, $errors );

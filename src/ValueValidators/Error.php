@@ -28,7 +28,7 @@ class Error {
 	 * @param string      $code
 	 * @param array       $params
 	 *
-	 * @return static
+	 * @return self
 	 */
 	public static function newError( $text = '', $property = null, $code = 'invalid', array $params = array() ) {
 		return new static( $text, self::SEVERITY_ERROR, $property, $code, $params );
