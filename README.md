@@ -15,7 +15,7 @@ On [Packagist](https://packagist.org/packages/data-values/interfaces):
 
 ## Requirements
 
-* PHP 5.3 or later
+* PHP 5.5 or later
 
 ## Installation
 
@@ -55,6 +55,10 @@ DataValues Interfaces has been written by [Jeroen De Dauw](https://www.mediawiki
 as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
+
+### 0.2.3 (dev)
+
+* Raised required PHP version from 5.3 to 5.5.
 
 ### 0.2.2 (2016-07-15)
 
