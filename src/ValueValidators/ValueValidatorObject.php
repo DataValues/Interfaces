@@ -37,14 +37,14 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 *
 	 * @var array
 	 */
-	protected $options = array();
+	protected $options = [];
 
 	/**
 	 * @since 0.1
 	 *
 	 * @var Error[]
 	 */
-	protected $errors = array();
+	protected $errors = [];
 
 	/**
 	 * @see ValueValidator::validate
@@ -54,7 +54,7 @@ abstract class ValueValidatorObject implements ValueValidator {
 	 * @return Result
 	 */
 	final public function validate( $value ) {
-		$this->errors = array();
+		$this->errors = [];
 
 		if ( $this->enableWhitelistRestrictions() ) {
 			$this->valueIsAllowed( $value );
@@ -62,7 +62,7 @@ abstract class ValueValidatorObject implements ValueValidator {
 
 		$this->doValidation( $value );
 
-		if ( $this->errors === array() ) {
+		if ( $this->errors === [] ) {
 			return Result::newSuccess();
 		} else {
 			return Result::newError( $this->errors );
@@ -165,10 +165,10 @@ abstract class ValueValidatorObject implements ValueValidator {
 		$value,
 		ValueValidator $validator,
 		$property = null,
-		array $optionMap = array()
+		array $optionMap = []
 	) {
-		if ( $optionMap !== array() ) {
-			$options = array();
+		if ( $optionMap !== [] ) {
+			$options = [];
 
 			foreach ( $optionMap as $source => $target ) {
 				if ( array_key_exists( $source, $this->options ) ) {

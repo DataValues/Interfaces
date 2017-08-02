@@ -22,7 +22,7 @@ class Result {
 	 *
 	 * @var Error[]
 	 */
-	protected $errors = array();
+	protected $errors = [];
 
 	/**
 	 * @since 0.1
@@ -84,7 +84,7 @@ class Result {
 	 * @param bool $isValid
 	 * @param Error[] $errors
 	 */
-	protected function __construct( $isValid, array $errors = array() ) {
+	protected function __construct( $isValid, array $errors = [] ) {
 		$this->isValid = $isValid;
 		$this->errors = $errors;
 	}

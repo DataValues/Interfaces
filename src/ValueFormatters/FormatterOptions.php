@@ -30,7 +30,7 @@ final class FormatterOptions {
 	 *
 	 * @throws InvalidArgumentException
 	 */
-	public function __construct( array $options = array() ) {
+	public function __construct( array $options = [] ) {
 		foreach ( array_keys( $options ) as $option ) {
 			if ( !is_string( $option ) ) {
 				throw new InvalidArgumentException( 'Option names need to be strings' );

@@ -16,19 +16,19 @@ use ValueValidators\Error;
 class ErrorTest extends \PHPUnit_Framework_TestCase {
 
 	public function newErrorProvider() {
-		$argLists = array();
+		$argLists = [];
 
-		$argLists[] = array();
+		$argLists[] = [];
 
-		$argLists[] = array( '' );
-		$argLists[] = array( 'foo' );
-		$argLists[] = array( ' foo bar baz.' );
+		$argLists[] = [ '' ];
+		$argLists[] = [ 'foo' ];
+		$argLists[] = [ ' foo bar baz.' ];
 
-		$argLists[] = array( ' foo bar ', null );
-		$argLists[] = array( ' foo bar ', 'length' );
+		$argLists[] = [ ' foo bar ', null ];
+		$argLists[] = [ ' foo bar ', 'length' ];
 
-		$argLists[] = array( ' foo bar ', null, 'something-went-wrong' );
-		$argLists[] = array( ' foo bar ', null, 'something-went-wrong', array( 'foo', 'bar' ) );
+		$argLists[] = [ ' foo bar ', null, 'something-went-wrong' ];
+		$argLists[] = [ ' foo bar ', null, 'something-went-wrong', [ 'foo', 'bar' ] ];
 
 		return $argLists;
 	}
