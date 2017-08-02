@@ -56,9 +56,11 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
-### 0.2.3 (dev)
+### 0.2.3 (2017-08-02)
 
-* Raised required PHP version from 5.3 to 5.5.
+* Updated minimal required PHP version from 5.3 to 5.5.9.
+* Minor fixes to code documentation.
+* Added PHPCS support.
 
 ### 0.2.2 (2016-07-15)
 

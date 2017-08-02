@@ -15,7 +15,7 @@ if ( defined( 'DATAVALUES_INTERFACES_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DATAVALUES_INTERFACES_VERSION', '0.2.2' );
+define( 'DATAVALUES_INTERFACES_VERSION', '0.2.3' );
 
 if ( defined( 'MEDIAWIKI' ) ) {
 	$GLOBALS['wgExtensionCredits']['datavalues'][] = [
