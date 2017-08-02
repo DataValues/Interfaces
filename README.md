@@ -56,6 +56,10 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 0.2.4 (2017-08-02)
+
+* Fixed `ValueFormatterTestBase` not being installable via Composer.
+
 ### 0.2.3 (2017-08-02)
 
 * Updated minimal required PHP version from 5.3 to 5.5.9.
