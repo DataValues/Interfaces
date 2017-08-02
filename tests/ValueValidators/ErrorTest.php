@@ -39,7 +39,7 @@ class ErrorTest extends \PHPUnit_Framework_TestCase {
 	public function testNewError() {
 		$args = func_get_args();
 
-		$error = call_user_func_array( 'ValueValidators\Error::newError', $args );
+		$error = call_user_func_array( [ Error::class, 'newError' ], $args );
 
 		/**
 		 * @var Error $error
