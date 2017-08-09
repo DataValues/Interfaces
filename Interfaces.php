@@ -16,17 +16,3 @@ if ( defined( 'DATAVALUES_INTERFACES_VERSION' ) ) {
 }
 
 define( 'DATAVALUES_INTERFACES_VERSION', '0.2.3' );
-
-if ( defined( 'MEDIAWIKI' ) ) {
-	$GLOBALS['wgExtensionCredits']['datavalues'][] = [
-		'path' => __DIR__,
-		'name' => 'DataValues Interfaces',
-		'version' => DATAVALUES_INTERFACES_VERSION,
-		'author' => [
-			'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
-		],
-		'url' => 'https://github.com/DataValues/Interfaces',
-		'description' => 'Defines interfaces for ValueParsers, ValueFormatters and ValueValidators',
-		'license-name' => 'GPL-2.0+'
-	];
-}
