@@ -56,6 +56,10 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 0.2.5 (2017-08-09)
+
+* Removed MediaWiki extension credits registration
+
 ### 0.2.4 (2017-08-02)
 
 * Fixed `ValueFormatterTestBase` not being installable via Composer.
