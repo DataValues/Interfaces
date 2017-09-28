@@ -26,6 +26,7 @@ interface ValueParser {
 	 * @param mixed $value
 	 *
 	 * @return mixed
+	 * @throws ParseException
 	 */
 	public function parse( $value );
 
