@@ -27,9 +27,6 @@
 		"wikibase/wikibase-codesniffer": "^0.1.0"
 	},
 	"autoload": {
-		"files" : [
-			"Interfaces.php"
-		],
 		"psr-4": {
 			"ValueFormatters\\": "src/ValueFormatters/",
 			"ValueParsers\\": "src/ValueParsers/",
