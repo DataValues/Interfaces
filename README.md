@@ -56,6 +56,11 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ## Release notes
 
+### 1.0.0 (alpha)
+
+* Removed `ValueValidator::setOptions` from the interface
+* Removed `$optionMap` parameter from `ValueValidatorObject::runSubValidator`
+
 ### 0.2.5 (2017-08-09)
 
 * Removed MediaWiki extension credits registration

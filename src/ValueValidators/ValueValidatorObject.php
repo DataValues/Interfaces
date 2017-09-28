@@ -150,38 +150,14 @@ abstract class ValueValidatorObject implements ValueValidator {
 
 	/**
 	 * Runs the value through the provided ValueValidator and registers the errors.
-	 * Options of $this can be mapped to those of the passed ValueValidator using
-	 * the $optionMap parameter in which keys are source names and values are target
-	 * names.
 	 *
-	 * @since 0.1
+	 * @since 0.3
 	 *
 	 * @param mixed $value
 	 * @param ValueValidator $validator
 	 * @param string|null $property
-	 * @param array $optionMap
 	 */
-	protected function runSubValidator(
-		$value,
-		ValueValidator $validator,
-		$property = null,
-		array $optionMap = []
-	) {
-		if ( $optionMap !== [] ) {
-			$options = [];
-
-			foreach ( $optionMap as $source => $target ) {
-				if ( array_key_exists( $source, $this->options ) ) {
-					$options[$target] = $this->options[$source];
-				}
-			}
-
-			$validator->setOptions( $options );
-		}
-
-		/**
-		 * @var Error $error
-		 */
+	protected function runSubValidator( $value, ValueValidator $validator, $property = null ) {
 		foreach ( $validator->validate( $value )->getErrors() as $error ) {
 			$this->addError( Error::newError( $error->getText(), $property ) );
 		}
