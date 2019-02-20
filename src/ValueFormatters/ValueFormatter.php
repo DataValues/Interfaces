@@ -27,7 +27,7 @@ interface ValueFormatter {
 	 *
 	 * @return mixed
 	 * @throws FormattingException
-     * @throws \InvalidArgumentException
+	 * @throws \InvalidArgumentException
 	 */
 	public function format( $value );
 
