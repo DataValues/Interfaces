@@ -27,6 +27,7 @@ interface ValueFormatter {
 	 *
 	 * @return mixed
 	 * @throws FormattingException
+	 * @throws \InvalidArgumentException when value is of wrong type or out of accepted range/pattern
 	 */
 	public function format( $value );
 
