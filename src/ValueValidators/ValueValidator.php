@@ -13,10 +13,6 @@ namespace ValueValidators;
 interface ValueValidator {
 
 	/**
-	 * Parses a value.
-	 *
-	 * @since 0.1
-	 *
 	 * @param mixed $value The value to validate
 	 *
 	 * @return Result
