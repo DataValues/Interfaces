@@ -58,6 +58,7 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ### 1.0.0 (alpha)
 
+* Removed `ValueValidatorObject`
 * Removed `ValueValidator::setOptions`
 * Removed `DATAVALUES_INTERFACES_VERSION` constant
 * Removed `$optionMap` parameter from `ValueValidatorObject::runSubValidator`
