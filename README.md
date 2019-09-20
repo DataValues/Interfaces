@@ -55,6 +55,7 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 ### 1.0.0 (alpha)
 
 * Updated minimal required PHP version from 5.5.9 to 7.1.
+* Removed `ValueFormatterBase`
 * Removed `ValueFormatterTestBase`
 * Removed `ValueValidator::setOptions`
 * Removed `ValueValidatorObject`
