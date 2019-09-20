@@ -1,11 +1,12 @@
 <?php
 
-namespace ValueParsers\Test;
+namespace ValueParsers\Tests;
 
+use PHPUnit\Framework\TestCase;
 use ValueParsers\ParserOptions;
 
 /**
- * @covers ValueParsers\ParserOptions
+ * @covers \ValueParsers\ParserOptions
  *
  * @group ValueParsers
  * @group DataValueExtensions
@@ -13,7 +14,7 @@ use ValueParsers\ParserOptions;
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
+class ParserOptionsTest extends TestCase {
 
 	public function testConstructor() {
 		$options = [
@@ -42,7 +43,7 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 			42 => [ 'o_O', false, null, '42' => 42, [] ]
 		];
 
-		$this->setExpectedException( 'Exception' );
+		$this->expectException( 'Exception' );
 
 		new ParserOptions( $options );
 	}
@@ -116,7 +117,7 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 		$this->assertTrue( true );
 		$formatterOptions = new ParserOptions( [ 'foo' => 'bar' ] );
 
-		$this->setExpectedException( 'InvalidArgumentException' );
+		$this->expectException( 'InvalidArgumentException' );
 
 		$formatterOptions->getOption( $nonExistingOption );
 	}
@@ -146,7 +147,7 @@ class ParserOptionsTest extends \PHPUnit_Framework_TestCase {
 			$parserOptions->requireOption( $option );
 		}
 
-		$this->setExpectedException( 'Exception' );
+		$this->expectException( 'Exception' );
 
 		$parserOptions->requireOption( 'Foo' );
 	}

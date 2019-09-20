@@ -1,11 +1,12 @@
 <?php
 
-namespace ValueFormatters\Test;
+namespace ValueFormatters\Tests;
 
+use PHPUnit\Framework\TestCase;
 use ValueFormatters\FormatterOptions;
 
 /**
- * @covers ValueFormatters\FormatterOptions
+ * @covers \ValueFormatters\FormatterOptions
  *
  * @group ValueFormatters
  * @group DataValueExtensions
@@ -13,7 +14,7 @@ use ValueFormatters\FormatterOptions;
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
+class FormatterOptionsTest extends TestCase {
 
 	public function testConstructor() {
 		$options = [
@@ -42,7 +43,7 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 			42 => [ 'o_O', false, null, '42' => 42, [] ]
 		];
 
-		$this->setExpectedException( 'Exception' );
+		$this->expectException( \Exception::class );
 
 		new FormatterOptions( $options );
 	}
@@ -116,7 +117,7 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 		$this->assertTrue( true );
 		$formatterOptions = new FormatterOptions( [ 'foo' => 'bar' ] );
 
-		$this->setExpectedException( 'OutOfBoundsException' );
+		$this->expectException( 'OutOfBoundsException' );
 
 		$formatterOptions->getOption( $nonExistingOption );
 	}
@@ -146,7 +147,7 @@ class FormatterOptionsTest extends \PHPUnit_Framework_TestCase {
 			$formatterOptions->requireOption( $option );
 		}
 
-		$this->setExpectedException( 'Exception' );
+		$this->expectException( 'Exception' );
 
 		$formatterOptions->requireOption( 'Foo' );
 	}

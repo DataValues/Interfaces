@@ -1,11 +1,12 @@
 <?php
 
-namespace ValueValidators\Test;
+namespace ValueValidators\Tests;
 
+use PHPUnit\Framework\TestCase;
 use ValueValidators\Error;
 
 /**
- * @covers ValueValidators\Error
+ * @covers \ValueValidators\Error
  *
  * @group ValueValidators
  * @group DataValueExtensions
@@ -13,7 +14,7 @@ use ValueValidators\Error;
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class ErrorTest extends \PHPUnit_Framework_TestCase {
+class ErrorTest extends TestCase {
 
 	public function newErrorProvider() {
 		$argLists = [];
