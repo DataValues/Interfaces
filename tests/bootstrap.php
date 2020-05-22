@@ -1,5 +1,7 @@
 <?php
 
+declare( strict_types = 1 );
+
 if ( PHP_SAPI !== 'cli' ) {
 	die( 'Not an entry point' );
 }
