@@ -15,11 +15,9 @@ final class FormatterOptions {
 	/**
 	 * @var array
 	 */
-	protected $options;
+	private $options;
 
 	/**
-	 * @param array $options
-	 *
 	 * @throws InvalidArgumentException
 	 */
 	public function __construct( array $options = [] ) {
@@ -57,7 +55,7 @@ final class FormatterOptions {
 	 * @throws OutOfBoundsException
 	 * @return mixed
 	 */
-	public function getOption( $option ) {
+	public function getOption( string $option ) {
 		if ( !array_key_exists( $option, $this->options ) ) {
 			throw new OutOfBoundsException( "Option '$option' has not been set so cannot be obtained" );
 		}
@@ -67,12 +65,8 @@ final class FormatterOptions {
 
 	/**
 	 * Returns if the specified option is set or not.
-	 *
-	 * @param string $option
-	 *
-	 * @return bool
 	 */
-	public function hasOption( $option ) {
+	public function hasOption( string $option ): bool {
 		return array_key_exists( $option, $this->options );
 	}
 
@@ -82,7 +76,7 @@ final class FormatterOptions {
 	 * @param string $option
 	 * @param mixed $default
 	 */
-	public function defaultOption( $option, $default ) {
+	public function defaultOption( string $option, $default ) {
 		if ( !$this->hasOption( $option ) ) {
 			$this->setOption( $option, $default );
 		}
@@ -96,7 +90,7 @@ final class FormatterOptions {
 	 *
 	 * @throws RuntimeException
 	 */
-	public function requireOption( $option ) {
+	public function requireOption( string $option ) {
 		if ( !$this->hasOption( $option ) ) {
 			throw new RuntimeException( 'Required option"' . $option . '" is not set' );
 		}

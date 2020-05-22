@@ -8,20 +8,13 @@ namespace ValueValidators;
  */
 final class Result {
 
-	/**
-	 * @var bool
-	 */
 	private $isValid;
-
-	/**
-	 * @var Error[]
-	 */
-	private $errors = [];
+	private $errors;
 
 	/**
 	 * @return self
 	 */
-	public static function newSuccess() {
+	public static function newSuccess(): self {
 		return new static( true );
 	}
 
@@ -30,7 +23,7 @@ final class Result {
 	 *
 	 * @return self
 	 */
-	public static function newError( array $errors ) {
+	public static function newError( array $errors ): self {
 		return new static( false, $errors );
 	}
 
@@ -50,7 +43,7 @@ final class Result {
 	 *
 	 * @return self
 	 */
-	public static function merge( self $a, self $b ) {
+	public static function merge( self $a, self $b ): self {
 		$aErrors = $a->getErrors();
 		$bErrors = $b->getErrors();
 
@@ -70,17 +63,12 @@ final class Result {
 	 * @param bool $isValid
 	 * @param Error[] $errors
 	 */
-	protected function __construct( $isValid, array $errors = [] ) {
+	protected function __construct( bool $isValid, array $errors = [] ) {
 		$this->isValid = $isValid;
 		$this->errors = $errors;
 	}
 
-	/**
-	 * Returns if the value was found to be valid or not.
-	 *
-	 * @return bool
-	 */
-	public function isValid() {
+	public function isValid(): bool {
 		return $this->isValid;
 	}
 
@@ -89,7 +77,7 @@ final class Result {
 	 *
 	 * @return Error[]
 	 */
-	public function getErrors() {
+	public function getErrors(): array {
 		return $this->errors;
 	}
 

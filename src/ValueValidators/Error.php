@@ -18,26 +18,11 @@ class Error {
 	private $code;
 	private $params;
 
-	/**
-	 * @param string      $text
-	 * @param string|null $property
-	 * @param string      $code
-	 * @param array       $params
-	 *
-	 * @return self
-	 */
-	public static function newError( $text = '', $property = null, $code = 'invalid', array $params = [] ) {
+	public static function newError( string $text = '', string $property = null, string $code = 'invalid', array $params = [] ): self {
 		return new static( $text, self::SEVERITY_ERROR, $property, $code, $params );
 	}
 
-	/**
-	 * @param string      $text
-	 * @param integer     $severity
-	 * @param string|null $property
-	 * @param string      $code
-	 * @param array       $params
-	 */
-	protected function __construct( $text, $severity, $property, $code, array $params ) {
+	protected function __construct( string $text, int $severity, ?string $property, string $code, array $params ) {
 		$this->text = $text;
 		$this->severity = $severity;
 		$this->property = $property;
@@ -45,40 +30,29 @@ class Error {
 		$this->params = $params;
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getText() {
+	public function getText(): string {
 		return $this->text;
 	}
 
 	/**
 	 * @return integer, element of the ValueValidatorError::SEVERITY_ enum
 	 */
-	public function getSeverity() {
+	public function getSeverity(): int {
 		return $this->severity;
 	}
 
 	/**
 	 * Returns the property of the value for which the error occurred, or null if it occurred for the value itself.
-	 *
-	 * @return string|null
 	 */
-	public function getProperty() {
+	public function getProperty(): ?string {
 		return $this->property;
 	}
 
-	/**
-	 * @return array
-	 */
-	public function getParameters() {
+	public function getParameters(): array {
 		return $this->params;
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getCode() {
+	public function getCode(): string {
 		return $this->code;
 	}
 

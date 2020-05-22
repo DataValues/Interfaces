@@ -16,7 +16,7 @@ interface ValueParser {
 	 * operate.
 	 * @since 0.1
 	 */
-	const OPT_LANG = 'lang';
+	public const OPT_LANG = 'lang';
 
 	/**
 	 * @since 0.1
