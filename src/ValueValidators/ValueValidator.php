@@ -3,10 +3,6 @@
 namespace ValueValidators;
 
 /**
- * Interface for value validators.
- *
- * @since 0.1
- *
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */

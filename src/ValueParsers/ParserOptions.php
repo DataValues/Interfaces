@@ -6,10 +6,6 @@ use InvalidArgumentException;
 use RuntimeException;
 
 /**
- * Object holding options for a parser.
- *
- * @since 0.1
- *
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
