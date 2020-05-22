@@ -6,17 +6,17 @@ namespace ValueValidators;
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class Result {
+final class Result {
 
 	/**
 	 * @var bool
 	 */
-	protected $isValid;
+	private $isValid;
 
 	/**
 	 * @var Error[]
 	 */
-	protected $errors = [];
+	private $errors = [];
 
 	/**
 	 * @return self

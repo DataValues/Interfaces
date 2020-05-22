@@ -8,15 +8,15 @@ namespace ValueValidators;
  */
 class Error {
 
-	const SEVERITY_ERROR = 9;
-	const SEVERITY_WARNING = 4;
+	public const SEVERITY_ERROR = 9;
+	public const SEVERITY_WARNING = 4;
 
-	protected $text;
-	protected $severity;
-	protected $property;
+	private $text;
+	private $severity;
+	private $property;
 
-	protected $code;
-	protected $params;
+	private $code;
+	private $params;
 
 	/**
 	 * @param string      $text
