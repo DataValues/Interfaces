@@ -45,11 +45,6 @@ This library comes with a set up PHPUnit tests that cover all non-trivial code. 
 tests using the PHPUnit configuration file found in the root directory. The tests can also be run
 via TravisCI, as a TravisCI configuration file is also provided in the root directory.
 
-## Authors
-
-DataValues Interfaces has been written by [Jeroen De Dauw](https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw),
-as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project](https://wikidata.org/).
-
 ## Release notes
 
 ### 1.0.0 (alpha)
