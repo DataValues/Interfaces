@@ -13,10 +13,6 @@ On [Packagist](https://packagist.org/packages/data-values/interfaces):
 [![Latest Stable Version](https://poser.pugx.org/data-values/interfaces/version.png)](https://packagist.org/packages/data-values/interfaces)
 [![Download count](https://poser.pugx.org/data-values/interfaces/d/total.png)](https://packagist.org/packages/data-values/interfaces)
 
-## Requirements
-
-* PHP 5.5 or later
-
 ## Installation
 
 You can use [Composer](http://getcomposer.org/) to download and install
@@ -58,6 +54,9 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 ### 1.0.0 (alpha)
 
+* Updated minimal required PHP version from 5.5.9 to 7.1.
+* Removed `ValueFormatterBase`
+* Removed `ValueFormatterTestBase`
 * Removed `ValueValidator::setOptions`
 * Removed `ValueValidatorObject`
 * Removed `DATAVALUES_INTERFACES_VERSION` constant
