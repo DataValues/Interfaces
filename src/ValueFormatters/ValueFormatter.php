@@ -14,13 +14,10 @@ interface ValueFormatter {
 	/**
 	 * Identifier for the option that holds the code of the language in which the formatter should
 	 * operate.
-	 * @since 0.1
 	 */
 	const OPT_LANG = 'lang';
 
 	/**
-	 * @since 0.1
-	 *
 	 * @param mixed $value
 	 *
 	 * @return mixed

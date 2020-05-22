@@ -13,15 +13,11 @@ use RuntimeException;
 final class FormatterOptions {
 
 	/**
-	 * @since 0.1
-	 *
 	 * @var array
 	 */
 	protected $options;
 
 	/**
-	 * @since 0.1
-	 *
 	 * @param array $options
 	 *
 	 * @throws InvalidArgumentException
@@ -38,8 +34,6 @@ final class FormatterOptions {
 
 	/**
 	 * Sets the value of the specified option.
-	 *
-	 * @since 0.1
 	 *
 	 * @param string $option
 	 * @param mixed $value
@@ -58,8 +52,6 @@ final class FormatterOptions {
 	 * Returns the value of the specified option. If the option is not set,
 	 * an InvalidArgumentException is thrown.
 	 *
-	 * @since 0.1
-	 *
 	 * @param string $option
 	 *
 	 * @throws OutOfBoundsException
@@ -76,8 +68,6 @@ final class FormatterOptions {
 	/**
 	 * Returns if the specified option is set or not.
 	 *
-	 * @since 0.1
-	 *
 	 * @param string $option
 	 *
 	 * @return bool
@@ -88,8 +78,6 @@ final class FormatterOptions {
 
 	/**
 	 * Sets the value of an option to the provided default in case the option is not set yet.
-	 *
-	 * @since 0.1
 	 *
 	 * @param string $option
 	 * @param mixed $default
@@ -103,8 +91,6 @@ final class FormatterOptions {
 	/**
 	 * Requires an option to be set.
 	 * If it's not set, a RuntimeException is thrown.
-	 *
-	 * @since 0.1
 	 *
 	 * @param string $option
 	 *
