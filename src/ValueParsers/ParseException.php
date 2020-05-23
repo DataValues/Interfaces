@@ -1,12 +1,12 @@
 <?php
 
+declare( strict_types = 1 );
+
 namespace ValueParsers;
 
 use RuntimeException;
 
 /**
- * @since 0.1
- *
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
@@ -25,12 +25,9 @@ class ParseException extends RuntimeException {
 	/**
 	 * @param string $message        A plain english message describing the error
 	 * @param string|null $rawValue The raw value that failed to be parsed.
-	 * @param string|null $expectedFormat An identifier for the format the raw value
-	 *                               did not match
-	 *
-	 * @since 0.1.4
+	 * @param string|null $expectedFormat An identifier for the format the raw value did not match
 	 */
-	public function __construct( $message, $rawValue = null, $expectedFormat = null ) {
+	public function __construct( string $message, string $rawValue = null, string $expectedFormat = null ) {
 		parent::__construct( $message );
 		$this->expectedFormat = $expectedFormat;
 		$this->rawValue = $rawValue;
@@ -45,10 +42,8 @@ class ParseException extends RuntimeException {
 	 * in fact the parser would only accept positive floats. However, if the user
 	 * enters a negative float, the parser must throw with a more specific format,
 	 * i. e. 'positive-float'.
-	 *
-	 * @since 0.1.4
 	 */
-	public function getExpectedFormat() {
+	public function getExpectedFormat(): ?string {
 		return $this->expectedFormat;
 	}
 
@@ -57,10 +52,8 @@ class ParseException extends RuntimeException {
 	 *
 	 * This is not necessarily the value an user entered, but the rawest value
 	 * that's available at the throwing site.
-	 *
-	 * @since 0.1.4
 	 */
-	public function getRawValue() {
+	public function getRawValue(): ?string {
 		return $this->rawValue;
 	}
 

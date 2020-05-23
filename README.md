@@ -56,6 +56,8 @@ via TravisCI, as a TravisCI configuration file is also provided in the root dire
 * Removed `ValueValidator::setOptions`
 * Removed `ValueValidatorObject`
 * Removed `DATAVALUES_INTERFACES_VERSION` constant
+* `ValueValidators\Result` is now final
+* The properties of `ValueValidators\Error` are now private instead of protected
 
 ### 0.2.5 (2017-08-09)
 
