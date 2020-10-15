@@ -50,7 +50,7 @@ via TravisCI, as a TravisCI configuration file is also provided in the root dire
 
 ### 1.0.0 (alpha)
 
-* Updated minimal required PHP version from 5.5.9 to 7.1.
+* Updated minimum required PHP version from 5.5.9 to 7.2
 * Removed `ValueFormatterBase`
 * Removed `ValueFormatterTestBase`
 * Removed `ValueValidator::setOptions`
