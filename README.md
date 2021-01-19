@@ -6,7 +6,6 @@ time you are likely better served by creating dedicated interfaces within your p
 DataValues Interfaces is a small PHP library that defines a set of interfaces for parsers,
 formatters and validators. It is part of the [DataValues set of libraries](https://github.com/DataValues).
 
-[![Build Status](https://secure.travis-ci.org/DataValues/Interfaces.png?branch=master)](http://travis-ci.org/DataValues/Interfaces)
 [![Code Coverage](https://scrutinizer-ci.com/g/DataValues/Interfaces/badges/coverage.png?s=6432d29bf3fed068995e66093ad52e053099a916)](https://scrutinizer-ci.com/g/DataValues/Interfaces/)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/DataValues/Interfaces/badges/quality-score.png?s=da1bb6ea09762d9e3a143e473cdefa712db46804)](https://scrutinizer-ci.com/g/DataValues/Interfaces/)
 
@@ -44,7 +43,7 @@ Interfaces.php.
 
 This library comes with a set up PHPUnit tests that cover all non-trivial code. You can run these
 tests using the PHPUnit configuration file found in the root directory. The tests can also be run
-via TravisCI, as a TravisCI configuration file is also provided in the root directory.
+via Github Actions.
 
 ## Release notes
 
