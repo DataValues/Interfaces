@@ -49,11 +49,7 @@ class ErrorTest extends TestCase {
 		 */
 		$this->assertInstanceOf( 'ValueValidators\Error', $error );
 
-		$this->assertInternalType( 'string', $error->getText() );
-		$this->assertInternalType( 'integer', $error->getSeverity() );
 		$this->assertTrue( is_string( $error->getProperty() ) || is_null( $error->getProperty() ) );
-		$this->assertInternalType( 'string', $error->getCode() );
-		$this->assertInternalType( 'array', $error->getParameters() );
 
 		if ( count( $args ) > 0 ) {
 			$this->assertSame( $args[0], $error->getText() );
