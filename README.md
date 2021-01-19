@@ -36,7 +36,7 @@ via Github Actions.
 
 ## Release notes
 
-### 1.0.0 (2021-01-19)
+### 1.0.0 (2021-01-20)
 
 * Updated minimum required PHP version from 5.5.9 to 7.2
 * Removed `ValueFormatterBase`
