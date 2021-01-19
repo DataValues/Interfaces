@@ -21,7 +21,7 @@ class Error {
 	private $params;
 
 	public static function newError( string $text = '', string $property = null, string $code = 'invalid', array $params = [] ): self {
-		return new static( $text, self::SEVERITY_ERROR, $property, $code, $params );
+		return new self( $text, self::SEVERITY_ERROR, $property, $code, $params );
 	}
 
 	protected function __construct( string $text, int $severity, ?string $property, string $code, array $params ) {
