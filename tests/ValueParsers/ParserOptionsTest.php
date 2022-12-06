@@ -45,7 +45,7 @@ class ParserOptionsTest extends TestCase {
 			42 => [ 'o_O', false, null, '42' => 42, [] ]
 		];
 
-		$this->expectException( 'Exception' );
+		$this->expectException( \Exception::class );
 
 		new ParserOptions( $options );
 	}
@@ -117,11 +117,11 @@ class ParserOptionsTest extends TestCase {
 	 */
 	public function testGetOption( $nonExistingOption ) {
 		$this->assertTrue( true );
-		$formatterOptions = new ParserOptions( [ 'foo' => 'bar' ] );
+		$parserOptions = new ParserOptions( [ 'foo' => 'bar' ] );
 
 		$this->expectException( 'InvalidArgumentException' );
 
-		$formatterOptions->getOption( $nonExistingOption );
+		$parserOptions->getOption( $nonExistingOption );
 	}
 
 	public function nonExistingOptionsProvider() {
