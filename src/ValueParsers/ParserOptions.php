@@ -34,6 +34,30 @@ final class ParserOptions {
 	}
 
 	/**
+	 * Create and return a copy of these options,
+	 * where the value of an option was set to the provided default
+	 * if it had not been set already.
+	 *
+	 * Example usage:
+	 * ```php
+	 * public function __construct( ParserOptions $options ) {
+	 *     $this->options = $options
+	 *         ->withDefaultOption( self::OPT_A, 'A' )
+	 *         ->withDefaultOption( self::OPT_B, 'B' );
+	 * }
+	 * ```
+	 *
+	 * @param string $option
+	 * @param mixed $default
+	 * @return self
+	 */
+	public function withDefaultOption( string $option, $default ): self {
+		$options = new self( $this->options );
+		$options->defaultOption( $option, $default );
+		return $options;
+	}
+
+	/**
 	 * Sets the value of the specified option.
 	 *
 	 * @param string $option
@@ -76,6 +100,7 @@ final class ParserOptions {
 	/**
 	 * Sets the value of an option to the provided default in case the option is not set yet.
 	 *
+	 * @deprecated Use {@link withDefaultOption()} instead.
 	 * @param string $option
 	 * @param mixed $default
 	 */

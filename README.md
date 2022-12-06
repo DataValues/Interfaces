@@ -36,6 +36,12 @@ via Github Actions.
 
 ## Release notes
 
+### 1.1.0 (dev)
+
+* Introduced `ParserOptions::withDefaultOption()` and `FormatterOptions::withDefaultOption()`,
+  which return a copy of the options with the default applied;
+  the `defaultOption()` methods, which modify the options in place, are deprecated.
+
 ### 1.0.0 (2021-01-20)
 
 * Updated minimum required PHP version from 5.5.9 to 7.2
