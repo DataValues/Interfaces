@@ -191,4 +191,23 @@ class FormatterOptionsTest extends TestCase {
 		}
 	}
 
+	public function testWithDefaultOption() {
+		$originalOptions = new FormatterOptions( [ 'foo' => 'foo' ] );
+
+		$newOptions = $originalOptions
+			->withDefaultOption( 'foo', 'FOO' )
+			->withDefaultOption( 'bar', 'BAR' );
+
+		$this->assertNotSame( $originalOptions, $newOptions,
+			'should be a fresh instance' );
+		$this->assertSame( 'foo', $originalOptions->getOption( 'foo' ),
+			'original options should have same non-default option' );
+		$this->assertFalse( $originalOptions->hasOption( 'bar' ),
+			'original options should not have default option' );
+		$this->assertSame( 'foo', $newOptions->getOption( 'foo' ),
+			'new options should have same non-default option' );
+		$this->assertSame( 'BAR', $newOptions->getOption( 'bar' ),
+			'new options should have default option' );
+	}
+
 }

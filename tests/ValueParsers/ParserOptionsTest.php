@@ -45,7 +45,7 @@ class ParserOptionsTest extends TestCase {
 			42 => [ 'o_O', false, null, '42' => 42, [] ]
 		];
 
-		$this->expectException( 'Exception' );
+		$this->expectException( \Exception::class );
 
 		new ParserOptions( $options );
 	}
@@ -117,11 +117,11 @@ class ParserOptionsTest extends TestCase {
 	 */
 	public function testGetOption( $nonExistingOption ) {
 		$this->assertTrue( true );
-		$formatterOptions = new ParserOptions( [ 'foo' => 'bar' ] );
+		$parserOptions = new ParserOptions( [ 'foo' => 'bar' ] );
 
 		$this->expectException( 'InvalidArgumentException' );
 
-		$formatterOptions->getOption( $nonExistingOption );
+		$parserOptions->getOption( $nonExistingOption );
 	}
 
 	public function nonExistingOptionsProvider() {
@@ -189,6 +189,25 @@ class ParserOptionsTest extends TestCase {
 				'Defaulting a not set option should affect its value'
 			);
 		}
+	}
+
+	public function testWithDefaultOption() {
+		$originalOptions = new ParserOptions( [ 'foo' => 'foo' ] );
+
+		$newOptions = $originalOptions
+			->withDefaultOption( 'foo', 'FOO' )
+			->withDefaultOption( 'bar', 'BAR' );
+
+		$this->assertNotSame( $originalOptions, $newOptions,
+			'should be a fresh instance' );
+		$this->assertSame( 'foo', $originalOptions->getOption( 'foo' ),
+			'original options should have same non-default option' );
+		$this->assertFalse( $originalOptions->hasOption( 'bar' ),
+			'original options should not have default option' );
+		$this->assertSame( 'foo', $newOptions->getOption( 'foo' ),
+			'new options should have same non-default option' );
+		$this->assertSame( 'BAR', $newOptions->getOption( 'bar' ),
+			'new options should have default option' );
 	}
 
 }
