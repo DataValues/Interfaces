@@ -6,6 +6,7 @@ namespace ValueFormatters\Tests;
 
 use PHPUnit\Framework\TestCase;
 use ValueFormatters\FormatterOptions;
+use ValueFormatters\MismatchingOptionTypeException;
 
 /**
  * @covers \ValueFormatters\FormatterOptions
@@ -122,6 +123,34 @@ class FormatterOptionsTest extends TestCase {
 		$this->expectException( 'OutOfBoundsException' );
 
 		$formatterOptions->getOption( $nonExistingOption );
+	}
+
+	public function testGetStringOption() {
+		$formatterOptions = new FormatterOptions( [ 'string' => 'option', 'int' => 3 ] );
+		$this->assertEquals( 'option', $formatterOptions->getStringOption( 'string' ) );
+
+		$this->expectException( MismatchingOptionTypeException::class );
+		$this->expectExceptionMessage( "Expected string value for option 'int' but found integer" );
+
+		$formatterOptions->getStringOption( 'int' );
+	}
+
+	public function testGetNonExistentStringOption() {
+		$formatterOptions = new FormatterOptions( [ 'string' => 'option', 'int' => 3 ] );
+
+		$this->expectException( \OutOfBoundsException::class );
+		$this->expectExceptionMessage( "Option 'test' has not been set so cannot be obtained" );
+
+		$formatterOptions->getStringOption( 'test' );
+	}
+
+	public function testGetNullStringOption() {
+		$formatterOptions = new FormatterOptions( [ 'test' => null ] );
+
+		$this->expectException( MismatchingOptionTypeException::class );
+		$this->expectExceptionMessage( "Expected string value for option 'test' but found NULL" );
+
+		$formatterOptions->getStringOption( 'test' );
 	}
 
 	public function nonExistingOptionsProvider() {

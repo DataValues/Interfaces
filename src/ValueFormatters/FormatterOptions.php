@@ -90,6 +90,29 @@ final class FormatterOptions {
 	}
 
 	/**
+	 * Returns the value of the specified option. If the option is not set,
+	 * an OutOfBoundsException is thrown. If the option exists and is set
+	 * but the value is not a string, a MismatchingOptionTypeException is thrown.
+	 *
+	 * @param string $option
+	 *
+	 * @throws OutOfBoundsException
+	 * @throws MismatchingOptionTypeException
+	 * @return string
+	 */
+	public function getStringOption( string $option ) {
+		$result = $this->getOption( $option );
+		if ( gettype( $result ) !== "string" ) {
+			throw new MismatchingOptionTypeException(
+				"string",
+				gettype( $result ),
+				"Expected string value for option '$option' but found " . gettype( $result )
+			);
+		}
+		return $result;
+	}
+
+	/**
 	 * Returns if the specified option is set or not.
 	 */
 	public function hasOption( string $option ): bool {
