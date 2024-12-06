@@ -13,7 +13,7 @@ use ValueValidators\Error;
  * @group ValueValidators
  * @group DataValueExtensions
  *
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 class ErrorTest extends TestCase {
@@ -49,7 +49,7 @@ class ErrorTest extends TestCase {
 		 */
 		$this->assertInstanceOf( 'ValueValidators\Error', $error );
 
-		$this->assertTrue( is_string( $error->getProperty() ) || is_null( $error->getProperty() ) );
+		$this->assertTrue( is_string( $error->getProperty() ) || $error->getProperty() === null );
 
 		if ( count( $args ) > 0 ) {
 			$this->assertSame( $args[0], $error->getText() );

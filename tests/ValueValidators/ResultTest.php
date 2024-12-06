@@ -14,7 +14,7 @@ use ValueValidators\Result;
  * @group ValueValidators
  * @group DataValueExtensions
  *
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Daniel Kinzler
  */
 class ResultTest extends TestCase {
@@ -23,7 +23,7 @@ class ResultTest extends TestCase {
 		$result = Result::newSuccess();
 
 		$this->assertTrue( $result->isValid() );
-		$this->assertEmpty( $result->getErrors() );
+		$this->assertCount( 0, $result->getErrors() );
 	}
 
 	public function testNewError() {
