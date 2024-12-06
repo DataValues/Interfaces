@@ -5,13 +5,13 @@ declare( strict_types = 1 );
 namespace ValueValidators;
 
 /**
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 final class Result {
 
-	private $isValid;
-	private $errors;
+	private bool $isValid;
+	private array $errors;
 
 	/**
 	 * @return self

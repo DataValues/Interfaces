@@ -8,7 +8,7 @@ namespace ValueParsers;
  * Interface for value parsers, typically (but not limited to) expecting a string and returning a
  * DataValue object.
  *
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 interface ValueParser {

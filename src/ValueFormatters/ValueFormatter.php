@@ -8,7 +8,7 @@ namespace ValueFormatters;
  * Interface for value formatters, typically (but not limited to) expecting a DataValue object and
  * returning a string.
  *
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 interface ValueFormatter {
@@ -17,7 +17,7 @@ interface ValueFormatter {
 	 * Identifier for the option that holds the code of the language in which the formatter should
 	 * operate.
 	 */
-	const OPT_LANG = 'lang';
+	public const OPT_LANG = 'lang';
 
 	/**
 	 * @param mixed $value

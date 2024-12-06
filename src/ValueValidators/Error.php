@@ -5,7 +5,7 @@ declare( strict_types = 1 );
 namespace ValueValidators;
 
 /**
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 class Error {
@@ -13,14 +13,13 @@ class Error {
 	public const SEVERITY_ERROR = 9;
 	public const SEVERITY_WARNING = 4;
 
-	private $text;
-	private $severity;
-	private $property;
+	private string $text;
+	private int $severity;
+	private ?string $property;
+	private string $code;
+	private array $params;
 
-	private $code;
-	private $params;
-
-	public static function newError( string $text = '', string $property = null, string $code = 'invalid', array $params = [] ): self {
+	public static function newError( string $text = '', ?string $property = null, string $code = 'invalid', array $params = [] ): self {
 		return new self( $text, self::SEVERITY_ERROR, $property, $code, $params );
 	}
 
@@ -37,7 +36,7 @@ class Error {
 	}
 
 	/**
-	 * @return integer, element of the ValueValidatorError::SEVERITY_ enum
+	 * @return int element of the ValueValidatorError::SEVERITY_ enum
 	 */
 	public function getSeverity(): int {
 		return $this->severity;

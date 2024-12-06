@@ -7,7 +7,7 @@ namespace ValueParsers;
 use RuntimeException;
 
 /**
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 class ParseException extends RuntimeException {
@@ -23,11 +23,11 @@ class ParseException extends RuntimeException {
 	private $rawValue;
 
 	/**
-	 * @param string $message        A plain english message describing the error
+	 * @param string $message A plain english message describing the error
 	 * @param string|null $rawValue The raw value that failed to be parsed.
 	 * @param string|null $expectedFormat An identifier for the format the raw value did not match
 	 */
-	public function __construct( string $message, string $rawValue = null, string $expectedFormat = null ) {
+	public function __construct( string $message, ?string $rawValue = null, ?string $expectedFormat = null ) {
 		parent::__construct( $message );
 		$this->expectedFormat = $expectedFormat;
 		$this->rawValue = $rawValue;
