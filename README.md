@@ -4,15 +4,14 @@ The design of this library is poor and its reason for existing is questionable. 
 time you are likely better served by creating dedicated interfaces within your project.
 
 DataValues Interfaces is a small PHP library that defines a set of interfaces for parsers,
-formatters and validators. It is part of the [DataValues set of libraries](https://github.com/DataValues).
+formatters, and validators. It is part of the [DataValues set of libraries](https://github.com/DataValues).
 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/DataValues/Interfaces/php.yml?branch=master)](https://github.com/DataValues/Interfaces/actions/workflows/php.yml?query=workflow%3APHP)
 [![Code Coverage](https://scrutinizer-ci.com/g/DataValues/Interfaces/badges/coverage.png?s=6432d29bf3fed068995e66093ad52e053099a916)](https://scrutinizer-ci.com/g/DataValues/Interfaces/)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/DataValues/Interfaces/badges/quality-score.png?s=da1bb6ea09762d9e3a143e473cdefa712db46804)](https://scrutinizer-ci.com/g/DataValues/Interfaces/)
 
 On [Packagist](https://packagist.org/packages/data-values/interfaces):
-[![Latest Stable Version](https://poser.pugx.org/data-values/interfaces/version.png)](https://packagist.org/packages/data-values/interfaces)
-[![Download count](https://poser.pugx.org/data-values/interfaces/d/total.png)](https://packagist.org/packages/data-values/interfaces)
-
+[![Latest Stable Version](https://poser.pugx.org/data-values/interfaces/v/stable)](https://packagist.org/packages/data-values/interfaces)
+[![Download count](https://poser.pugx.org/data-values/interfaces/downloads)](https://packagist.org/packages/data-values/interfaces)
 
 ## Installation
 
