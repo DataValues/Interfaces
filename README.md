@@ -36,6 +36,13 @@ via Github Actions.
 
 ## Release notes
 
+### 1.2.0 (2024-12-10)
+
+* Drop support for PHP 7.2, 7.3
+* Upgrade codesniffer rules to current `mediawiki/mediawiki-codesniffer` version (45.0.0)
+* Make nullable type parameter declarations explicit for compatibility with PHP 8.4
+* Start testing with modern versions of PHP (8.1-8.4)
+
 ### 1.1.0 (dev)
 
 * Introduced `ParserOptions::withDefaultOption()` and `FormatterOptions::withDefaultOption()`,
